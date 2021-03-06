@@ -24,9 +24,9 @@ def clicked():
             tablero = GridFrame(None, obstaculos)
             tablero.exec_dfs()
             app.MainLoop()
-        elif nombre_busqueda == 'Gredy' and 0 < obstaculos <= 80:
+        elif nombre_busqueda == 'Greedy' and 0 < obstaculos <= 80:
             tablero = GridFrame(None, obstaculos)
-            tablero.exec_gredy()
+            tablero.exec_greedy()
             app.MainLoop()
         elif nombre_busqueda == 'A*' and 0 < obstaculos <= 80:
             tablero = GridFrame(None, obstaculos)
@@ -40,7 +40,7 @@ def clicked():
 
 
 if __name__ == '__main__':
-    combo['values'] = ('BFS', 'DFS', 'Gredy', 'A*')
+    combo['values'] = ('BFS', 'DFS', 'Greedy', 'A*')
     combo.grid(column=0, row=0, padx=80, pady=10)
     spin = Spinbox(window, from_=1, to=80, width=5)
     spin.set(5)
